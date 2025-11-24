@@ -10,7 +10,7 @@ const Dock = () => {
 
     useGSAP(() => {
         const dock = docRef.current;
-        if (!dock) return;
+        if (!dock) return () => { };
 
         const icons = Array.from(dock.querySelectorAll(".dock-icon"));
 
